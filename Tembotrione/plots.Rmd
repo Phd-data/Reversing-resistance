@@ -1,0 +1,191 @@
+---
+title: "POSTER"
+author: "Maxwel C. Oliveira"
+date: "April 17, 2017"
+output: html_document
+---
+
+
+```{r LoadPackage drc, warning=FALSE, echo=FALSE, include=FALSE}
+library(drc)
+library(cowplot)
+```
+
+
+```{r loadData, message=FALSE, warning=FALSE, include=FALSE}
+Tembo=read.csv("Tembotrione.csv")
+str(Tembo)
+```
+
+
+
+```{r fit the model, echo=FALSE, warning=FALSE}
+Model=drm(y~h, TRT,  fct=W1.3 (fixed =c(NA,NA,NA)), data= Tembo)
+summary(Model)
+plot(Model, col=c(1,2,3,4,5))
+```
+
+```{r Model selection, warning=FALSE, echo=FALSE, include=FALSE}
+mselect(Model, list(LL.3(), LL.5(), W1.3(), l4(), W2.4(), l3())
+, nested = FALSE, sorted = c("IC", "Res var", "Lack of fit", "no"), linreg = FALSE, icfct = AIC)
+```
+
+```{r}
+ED(Model, c(50), type="absolute", interval="delta")
+EDcomp(Model, c(80,80), type="absolute", level=0.95)
+```
+
+
+```{r, warning=F, include=FALSE}
+Tembo$TRTB <-factor(Tembo$TRT, levels=c("Aminotriozole", "Malathion", "Piperonyl butoxide", "R", "S"), labels=c("amitrole fb tembotrione-R", "malathion fb tembotrione-R", "PBO fb tembotrione-R", "tembotrione-R", "tembotrione-S"))
+str(Tembo)
+
+Model=drm(y~h, TRTB,  fct=W1.3 (fixed =c(NA,NA,NA)), data= Tembo)
+ED(Model, c(80), type="absolute", interval = "delta")
+EDcomp(Model, c(50,50), type="absolute")
+
+# predictions and confidence intervals
+newdata <- expand.grid(h=exp(seq(log(0.5), log(336), length=336)))
+#newdata <- data.frame(h=seq(0,336, 1))
+newdata6 <- data.frame(TRTB=c("amitrole fb tembotrione-R"), newdata)
+newdata7 <- data.frame(TRTB=c("malathion fb tembotrione-R"), newdata)
+newdata8 <- data.frame(TRTB=c("PBO fb tembotrione-R"), newdata)
+newdata9 <- data.frame(TRTB=c("tembotrione-R"), newdata)
+newdata10 <- data.frame(TRTB=c("tembotrione-S"), newdata)
+
+nd=rbind(newdata6, newdata7, newdata8, newdata9, newdata10)
+
+pm <- predict(Model, newdata=nd, interval="confidence") 
+nd$p <- pm[,1] 
+nd$pmin <- pm[,2] 
+nd$pmax <- pm[,3] 
+
+Tembo$h0 <- Tembo$h
+Tembo$h0[Tembo$h0==0] <- 0.5
+```
+
+
+```{r, echo=FALSE}
+library(ggplot2)
+
+ggplot(Tembo, aes(x = h0, y = y)) +  
+geom_line(data=nd, aes(x=h, y=p, linetype=TRTB, color=TRTB), size=1.3) + coord_trans(x="log") +
+  labs(fill="", y="Tembotrione Metabolism (%)", x="Hours After Treatment") +
+  #scale_color_brewer(palette="Set1") +
+ scale_colour_manual(values = c("red","blue", "green3", "purple", "orange")) +
+  scale_x_continuous(breaks=c(1, 12, 24, 72, 168, 336)) +
+  theme(axis.text=element_text(size=18, color="black"), 
+        axis.title=element_text(size=20,face="bold"), 
+        panel.background = element_rect(fill="white", color = "black"), 
+        panel.grid.major = element_line(color = "white"), 
+  panel.grid.minor = element_blank(),
+  legend.position=c(0.30,0.88), legend.text = element_text(size = 16, colour = "black"), legend.key = element_rect(fill=NA),
+legend.background = element_rect(fill =NA),  legend.title=element_blank())  + ylim(0,100) +
+ggsave("Tembot_poster.tiff", units="in", width=6, height=6, dpi=500, compression = 'lzw')
+```
+
+
+```{r ed80 tembotrione}
+library(ggplot2)
+
+Herbicide<-data.frame(trt=c("amitrole fb tembotrione-R", "malathion fb tembotrione-R", "piperonyl butoxide fb tembotrione-R", "tembotrione-R", "tembotrione-S"), y=c(40.9, 92.0, 70.7, 23.77, 77.63), se=c(6.84, 17.08, 8.97, 1.05, 14.85))
+limits <- aes(ymax = y + se, ymin=y - se) 
+
+
+
+B<-ggplot(Herbicide, aes(fill=trt, x=trt, y=y)) + #ggtitle("50% Tembotrione Metabolism in Waterhemp Leaves") + 
+  geom_bar(position="dodge", stat="identity", color="black", width=0.7) + geom_errorbar(limits, width=0.25, col="black") + 
+  labs(y="", x="") + scale_y_continuous(breaks=c(0, 20, 40, 60, 80, 100), limits=c(0, 100)) +
+  theme(axis.text=element_text(size=16, color="black"), 
+        axis.title=element_text(size=18, face="bold"), 
+        panel.background = element_rect(fill = "white", color = "black"), 
+        panel.grid.major = element_line(color = "white"), 
+    panel.grid.minor = element_blank(), legend.key.size = unit(1.8, 'lines'),
+       legend.position=c(9.34,0.81), legend.text = element_text(size = 12, colour = "black", face = "bold"), 
+    axis.text.x=element_blank(), axis.ticks.x=element_blank(),
+    legend.background = element_rect(colour = "white"), plot.title =  element_text(size=16, hjust=0.5, color="blue", face="italic"), legend.title=element_blank()) + scale_fill_brewer(palette="Set1") + annotate("text", label = "B", x = 5.3, y = 100, size=6, face="bold") +
+ggsave("ED80_poster.tiff", units="in", width=6, height=6, dpi=500)
+    
+```
+
+
+```{r ed50 tembotrione}
+library(ggplot2)
+
+Herbicide<-data.frame(trt=c("amitrole fb tembotrione-R", "malathion fb tembotrione-R", "piperonyl butoxide fb tembotrione-R", "tembotrione-R", "tembotrione-S"), y=c(25.84, 44.62, 41.2896, 18.82, 35.54), se=c(1.21, 3.97, 2.98, 3.46, 3.26))
+limits <- aes(ymax = y + se, ymin=y - se) 
+
+
+A<-ggplot(Herbicide, aes(fill=trt, x=trt, y=y)) + #ggtitle("50% Tembotrione Metabolism in Waterhemp Leaves") + 
+  geom_bar(position="dodge", stat="identity", color="black", width=0.7) + geom_errorbar(limits, width=0.25, col="black") + 
+  labs(y="Hours after treatment", x="") + scale_y_continuous(breaks=c(0, 20, 40, 60, 80, 100), limits=c(0, 100)) +
+  theme(axis.text=element_text(size=16, color="black"), 
+        axis.title=element_text(size=18, face="bold"), 
+        panel.background = element_rect(fill = "white", color = "black"), 
+        panel.grid.major = element_line(color = "white"), 
+    panel.grid.minor = element_blank(), legend.key.size = unit(1.7, 'lines'),
+       legend.position=c(0.34,0.81), legend.text = element_text(size = 12, colour = "black", face = "bold"), 
+    axis.text.x=element_blank(), axis.ticks.x=element_blank(),
+    legend.background = element_rect(colour = "white"), plot.title =  element_text(size=16, hjust=0.5, color="blue", face="italic"), legend.title=element_blank()) + scale_fill_brewer(palette="Set1") + annotate("text", label = "A", x = 5.3, y = 100, size=6) +
+ggsave("ED50_poster.tiff", units="in", width=6, height=6, dpi=500)
+```
+
+
+
+```{r}
+plot_grid(A,B, align='h') +
+ggsave("Combined.tiff", units="in", width=12, height=6, dpi=500)
+```
+
+
+
+
+```{r ed5080 tembotrione}
+library(ggplot2)
+
+Herbicide<-data.frame(trt=c("amitrole fb tembotrione-R", "malathion fb tembotrione-R", "piperonyl butoxide fb tembotrione-R", "tembotrione-R", "tembotrione-S", "amitrole fb tembotrione-R", "malathion fb tembotrione-R", "piperonyl butoxide fb tembotrione-R", "tembotrione-R", "tembotrione-S"), y=c(25.84, 44.62, 41.2896, 18.82, 35.54, 40.9, 92.0, 70.7, 23.77, 77.63), ed=c(50, 50, 50, 50, 50, 80, 80, 80, 80, 80), se=c(1.21, 3.97, 2.98, 3.46, 3.26, 6.84, 17.08, 8.97, 1.05, 14.85))
+limits <- aes(ymax = y + se, ymin=y - se) 
+
+Herbicide$ed<-factor(Herbicide$ed, levels=c("50", "80"), labels=c("50% metabolism", "80% metabolism"))
+
+
+ggplot(Herbicide, aes(fill=trt, x=trt, y=y)) + #ggtitle("50% Tembotrione Metabolism in Waterhemp Leaves") + 
+  geom_bar(position="dodge", stat="identity", color="black", width=0.7) + geom_errorbar(limits, width=0.25, col="black") + 
+  labs(y="Hours after treatment", x="") + scale_y_continuous(breaks=c(0, 20, 40, 60, 80, 100), limits=c(0, 110)) +
+  theme(axis.text=element_text(size=18, color="black"), 
+        axis.title=element_text(size=20, face="bold"), 
+        panel.background = element_rect(fill = "white", color = "black"), 
+        panel.grid.major = element_line(color = "white"), 
+    panel.grid.minor = element_blank(), legend.key.size = unit(1.7, 'lines'),
+       legend.position=c(0.18,0.81), legend.text = element_text(size = 15, colour = "black"), strip.text.x = element_text(size=15, face="bold"), panel.border=element_rect(fill=NA, color="black"), axis.text.x=element_blank(), axis.ticks.x=element_blank(),
+    legend.background = element_rect(colour = "white"), legend.title=element_blank()) + scale_fill_brewer(palette="Set1") + #annotate("text", label = c("A", "B"), x = 5.3, y = 100, size=6) + 
+  facet_wrap(~ed) +
+ggsave("ED5080_poster.tiff", units="in", width=12, height=6, dpi=800)
+```
+
+
+```{r ed5080 tembotrione}
+library(ggplot2)
+
+Herbicide<-data.frame(trt=c("amitrole fb tembotrione-R", "malathion fb tembotrione-R", "piperonyl butoxide fb tembotrione-R", "tembotrione-R", "tembotrione-S", "amitrole fb tembotrione-R", "malathion fb tembotrione-R", "piperonyl butoxide fb tembotrione-R", "tembotrione-R", "tembotrione-S"), y=c(25.84, 44.62, 41.2896, 18.82, 35.54, 40.9, 92.0, 70.7, 23.77, 77.63), ed=c(50, 50, 50, 50, 50, 80, 80, 80, 80, 80), se=c(1.21, 3.97, 2.98, 3.46, 3.26, 6.84, 17.08, 8.97, 1.05, 14.85))
+limits <- aes(ymax = y + se, ymin=y - se) 
+
+Herbicide$ed<-factor(Herbicide$ed, levels=c("50", "80"), labels=c("50% metabolism", "80% metabolism"))
+
+
+ggplot(Herbicide, aes(fill=trt, x=trt, y=y)) + #ggtitle("50% Tembotrione Metabolism in Waterhemp Leaves") + 
+  geom_bar(position="dodge", stat="identity", color="black", width=0.7) + geom_errorbar(limits, width=0.25, col="black") + 
+  labs(y="Hours after treatment", x="") + scale_y_continuous(breaks=c(0, 20, 40, 60, 80, 100), limits=c(0, 110)) +
+  theme(axis.text=element_text(size=18, color="black"), 
+        axis.title=element_text(size=20, face="bold"), 
+        panel.background = element_rect(fill = "white", color = "black"), 
+        panel.grid.major = element_line(color = "white"), 
+    panel.grid.minor = element_blank(), legend.key.size = unit(1.7, 'lines'),
+       legend.position=c(0.40,0.91), legend.text = element_text(size = 15, colour = "black"), strip.text.x = element_text(size=15, face="bold"),
+    axis.text.x=element_blank(), axis.ticks.x=element_blank(),
+    legend.background = element_rect(colour = "white"), legend.title=element_blank()) + scale_fill_brewer(palette="Set1") + #annotate("text", label = c("A", "B"), x = 5.3, y = 100, size=6) + 
+  
+  facet_wrap(~ed, ncol=1) +
+ggsave("ED50801_poster.tiff", units="in", width=6, height=12, dpi=800)
+```
+

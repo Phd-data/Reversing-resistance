@@ -1,0 +1,21 @@
+TRT,P450inhib,Herbicide,Biotype,h,rep,Conc,Totalamount,Fresh wg. (g),y
+Aminotriazole,Aminotriazole,Tembotrione,Resistant,24,1,"247,354",1236770,0.269,4597657.993
+Aminotriazole,Aminotriazole,Tembotrione,Resistant,24,2,"277,242",1386210,0.309,4486116.505
+Aminotriazole,Aminotriazole,Tembotrione,Resistant,24,3,"2,318,636",11593180,0.515,22511029.13
+Aminotriazole,Aminotriazole,Tembotrione,Resistant,24,4,"688,978",3444890,0.479,7191837.161
+Malathion,Malathion,Tembotrione,Resistant,24,1,"1,686,288",8431440,0.269,31343643.12
+Malathion,Malathion,Tembotrione,Resistant,24,2,"2,058,477",10292385,0.309,33308689.32
+Malathion,Malathion,Tembotrione,Resistant,24,3,"2,652,501",13262505,0.515,25752436.89
+Malathion,Malathion,Tembotrione,Resistant,24,4,"2,494,039",12470195,0.479,26033810.02
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,24,1,628.59,3142.95,0.881,3567.480136
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,24,2,"1,306.23",6531.155,1.46,4473.393836
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,24,3,738.93,3694.65,0.648,5701.62037
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,24,4,179.85,899.25,0.564,1594.414894
+R,No app.,Tembotrione,Resistant,24,1,262.902,1314.51,1.065,1234.28169
+R,No app.,Tembotrione,Resistant,24,2,340.891,1704.455,1.03,1654.81068
+R,No app.,Tembotrione,Resistant,24,3,47.838,239.19,0.516,463.5465116
+R,No app.,Tembotrione,Resistant,24,4,338.944,1694.72,0.989,1713.569262
+S,No app.,Tembotrione,Susceptible,24,1,"640,078",3200390,0.68,4706455.882
+S,No app.,Tembotrione,Susceptible,24,2,"475,642",2378210,0.597,3983601.34
+S,No app.,Tembotrione,Susceptible,24,3,"414,191",2070955,0.548,3779114.964
+S,No app.,Tembotrione,Susceptible,24,4,"256,781",1283905,0.747,1718748.327

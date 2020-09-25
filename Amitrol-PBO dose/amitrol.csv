@@ -1,0 +1,113 @@
+Weedsps,Rate,Rateunit,RateM,RateunitM,Trt,Rep,Population,Run,Herbicide,TRT,Y
+Waterhemp,0,fl oz/A,0,g AE/ha,1,1,Tarnov,1,Amitrole,Control,0
+Waterhemp,0,fl oz/A,0,g AE/ha,1,2,Tarnov,1,Amitrole,Control,0
+Waterhemp,0,fl oz/A,0,g AE/ha,1,3,Tarnov,1,Amitrole,Control,0
+Waterhemp,0,fl oz/A,0,g AE/ha,1,4,Tarnov,1,Amitrole,Control,0
+Waterhemp,0.37828,fl oz/A,6.634375,g AE/ha,2,1,Tarnov,1,Amitrole,Control,5
+Waterhemp,0.37828,fl oz/A,6.634375,g AE/ha,2,2,Tarnov,1,Amitrole,Control,10
+Waterhemp,0.37828,fl oz/A,6.634375,g AE/ha,2,3,Tarnov,1,Amitrole,Control,10
+Waterhemp,0.37828,fl oz/A,6.634375,g AE/ha,2,4,Tarnov,1,Amitrole,Control,10
+Waterhemp,0.75656,fl oz/A,13.26875,g AE/ha,3,1,Tarnov,1,Amitrole,Control,20
+Waterhemp,0.75656,fl oz/A,13.26875,g AE/ha,3,2,Tarnov,1,Amitrole,Control,15
+Waterhemp,0.75656,fl oz/A,13.26875,g AE/ha,3,3,Tarnov,1,Amitrole,Control,20
+Waterhemp,0.75656,fl oz/A,13.26875,g AE/ha,3,4,Tarnov,1,Amitrole,Control,10
+Waterhemp,1.51312,fl oz/A,26.5375,g AE/ha,4,1,Tarnov,1,Amitrole,Control,40
+Waterhemp,1.51312,fl oz/A,26.5375,g AE/ha,4,2,Tarnov,1,Amitrole,Control,55
+Waterhemp,1.51312,fl oz/A,26.5375,g AE/ha,4,3,Tarnov,1,Amitrole,Control,30
+Waterhemp,1.51312,fl oz/A,26.5375,g AE/ha,4,4,Tarnov,1,Amitrole,Control,45
+Waterhemp,3.0301,fl oz/A,53.075,g AE/ha,5,1,Tarnov,1,Amitrole,Control,60
+Waterhemp,3.0301,fl oz/A,53.075,g AE/ha,5,2,Tarnov,1,Amitrole,Control,80
+Waterhemp,3.0301,fl oz/A,53.075,g AE/ha,5,3,Tarnov,1,Amitrole,Control,60
+Waterhemp,3.0301,fl oz/A,53.075,g AE/ha,5,4,Tarnov,1,Amitrole,Control,90
+Waterhemp,6.0602,fl oz/A,106.15,g AE/ha,6,1,Tarnov,1,Amitrole,Control,80
+Waterhemp,6.0602,fl oz/A,106.15,g AE/ha,6,2,Tarnov,1,Amitrole,Control,90
+Waterhemp,6.0602,fl oz/A,106.15,g AE/ha,6,3,Tarnov,1,Amitrole,Control,90
+Waterhemp,6.0602,fl oz/A,106.15,g AE/ha,6,4,Tarnov,1,Amitrole,Control,90
+Waterhemp,12.159,fl oz/A,212.3,g AE/ha,7,1,Tarnov,1,Amitrole,Control,95
+Waterhemp,12.159,fl oz/A,212.3,g AE/ha,7,2,Tarnov,1,Amitrole,Control,95
+Waterhemp,12.159,fl oz/A,212.3,g AE/ha,7,3,Tarnov,1,Amitrole,Control,90
+Waterhemp,12.159,fl oz/A,212.3,g AE/ha,7,4,Tarnov,1,Amitrole,Control,85
+Waterhemp,0,fl oz/A,0,g AE/ha,1,1,Tarnov,2,Amitrole,Control,0
+Waterhemp,0,fl oz/A,0,g AE/ha,1,2,Tarnov,2,Amitrole,Control,0
+Waterhemp,0,fl oz/A,0,g AE/ha,1,3,Tarnov,2,Amitrole,Control,0
+Waterhemp,0,fl oz/A,0,g AE/ha,1,4,Tarnov,2,Amitrole,Control,0
+Waterhemp,0.37828,fl oz/A,6.634375,g AE/ha,2,1,Tarnov,2,Amitrole,Control,10
+Waterhemp,0.37828,fl oz/A,6.634375,g AE/ha,2,2,Tarnov,2,Amitrole,Control,15
+Waterhemp,0.37828,fl oz/A,6.634375,g AE/ha,2,3,Tarnov,2,Amitrole,Control,5
+Waterhemp,0.37828,fl oz/A,6.634375,g AE/ha,2,4,Tarnov,2,Amitrole,Control,15
+Waterhemp,0.75656,fl oz/A,13.26875,g AE/ha,3,1,Tarnov,2,Amitrole,Control,30
+Waterhemp,0.75656,fl oz/A,13.26875,g AE/ha,3,2,Tarnov,2,Amitrole,Control,35
+Waterhemp,0.75656,fl oz/A,13.26875,g AE/ha,3,3,Tarnov,2,Amitrole,Control,25
+Waterhemp,0.75656,fl oz/A,13.26875,g AE/ha,3,4,Tarnov,2,Amitrole,Control,20
+Waterhemp,1.51312,fl oz/A,26.5375,g AE/ha,4,1,Tarnov,2,Amitrole,Control,60
+Waterhemp,1.51312,fl oz/A,26.5375,g AE/ha,4,2,Tarnov,2,Amitrole,Control,50
+Waterhemp,1.51312,fl oz/A,26.5375,g AE/ha,4,3,Tarnov,2,Amitrole,Control,100
+Waterhemp,1.51312,fl oz/A,26.5375,g AE/ha,4,4,Tarnov,2,Amitrole,Control,100
+Waterhemp,3.0301,fl oz/A,53.075,g AE/ha,5,1,Tarnov,2,Amitrole,Control,80
+Waterhemp,3.0301,fl oz/A,53.075,g AE/ha,5,2,Tarnov,2,Amitrole,Control,100
+Waterhemp,3.0301,fl oz/A,53.075,g AE/ha,5,3,Tarnov,2,Amitrole,Control,80
+Waterhemp,3.0301,fl oz/A,53.075,g AE/ha,5,4,Tarnov,2,Amitrole,Control,80
+Waterhemp,6.0602,fl oz/A,106.15,g AE/ha,6,1,Tarnov,2,Amitrole,Control,95
+Waterhemp,6.0602,fl oz/A,106.15,g AE/ha,6,2,Tarnov,2,Amitrole,Control,100
+Waterhemp,6.0602,fl oz/A,106.15,g AE/ha,6,3,Tarnov,2,Amitrole,Control,90
+Waterhemp,6.0602,fl oz/A,106.15,g AE/ha,6,4,Tarnov,2,Amitrole,Control,90
+Waterhemp,12.159,fl oz/A,212.3,g AE/ha,7,1,Tarnov,2,Amitrole,Control,100
+Waterhemp,12.159,fl oz/A,212.3,g AE/ha,7,2,Tarnov,2,Amitrole,Control,95
+Waterhemp,12.159,fl oz/A,212.3,g AE/ha,7,3,Tarnov,2,Amitrole,Control,95
+Waterhemp,12.159,fl oz/A,212.3,g AE/ha,7,4,Tarnov,2,Amitrole,Control,100
+Waterhemp,0,fl oz/A,0,g AE/ha,1,1,Tarnov,1,Amitrole,Biomass reduction,0
+Waterhemp,0,fl oz/A,0,g AE/ha,1,2,Tarnov,1,Amitrole,Biomass reduction,0
+Waterhemp,0,fl oz/A,0,g AE/ha,1,3,Tarnov,1,Amitrole,Biomass reduction,0
+Waterhemp,0,fl oz/A,0,g AE/ha,1,4,Tarnov,1,Amitrole,Biomass reduction,0
+Waterhemp,0.37828,fl oz/A,6.634375,g AE/ha,2,1,Tarnov,1,Amitrole,Biomass reduction,10
+Waterhemp,0.37828,fl oz/A,6.634375,g AE/ha,2,2,Tarnov,1,Amitrole,Biomass reduction,5
+Waterhemp,0.37828,fl oz/A,6.634375,g AE/ha,2,3,Tarnov,1,Amitrole,Biomass reduction,10
+Waterhemp,0.37828,fl oz/A,6.634375,g AE/ha,2,4,Tarnov,1,Amitrole,Biomass reduction,14
+Waterhemp,0.75656,fl oz/A,13.26875,g AE/ha,3,1,Tarnov,1,Amitrole,Biomass reduction,24
+Waterhemp,0.75656,fl oz/A,13.26875,g AE/ha,3,2,Tarnov,1,Amitrole,Biomass reduction,22
+Waterhemp,0.75656,fl oz/A,13.26875,g AE/ha,3,3,Tarnov,1,Amitrole,Biomass reduction,48
+Waterhemp,0.75656,fl oz/A,13.26875,g AE/ha,3,4,Tarnov,1,Amitrole,Biomass reduction,35
+Waterhemp,1.51312,fl oz/A,26.5375,g AE/ha,4,1,Tarnov,1,Amitrole,Biomass reduction,51
+Waterhemp,1.51312,fl oz/A,26.5375,g AE/ha,4,2,Tarnov,1,Amitrole,Biomass reduction,74
+Waterhemp,1.51312,fl oz/A,26.5375,g AE/ha,4,3,Tarnov,1,Amitrole,Biomass reduction,31
+Waterhemp,1.51312,fl oz/A,26.5375,g AE/ha,4,4,Tarnov,1,Amitrole,Biomass reduction,58
+Waterhemp,3.0301,fl oz/A,53.075,g AE/ha,5,1,Tarnov,1,Amitrole,Biomass reduction,54
+Waterhemp,3.0301,fl oz/A,53.075,g AE/ha,5,2,Tarnov,1,Amitrole,Biomass reduction,92
+Waterhemp,3.0301,fl oz/A,53.075,g AE/ha,5,3,Tarnov,1,Amitrole,Biomass reduction,73
+Waterhemp,3.0301,fl oz/A,53.075,g AE/ha,5,4,Tarnov,1,Amitrole,Biomass reduction,93
+Waterhemp,6.0602,fl oz/A,106.15,g AE/ha,6,1,Tarnov,1,Amitrole,Biomass reduction,83
+Waterhemp,6.0602,fl oz/A,106.15,g AE/ha,6,2,Tarnov,1,Amitrole,Biomass reduction,89
+Waterhemp,6.0602,fl oz/A,106.15,g AE/ha,6,3,Tarnov,1,Amitrole,Biomass reduction,95
+Waterhemp,6.0602,fl oz/A,106.15,g AE/ha,6,4,Tarnov,1,Amitrole,Biomass reduction,86
+Waterhemp,12.159,fl oz/A,212.3,g AE/ha,7,1,Tarnov,1,Amitrole,Biomass reduction,96
+Waterhemp,12.159,fl oz/A,212.3,g AE/ha,7,2,Tarnov,1,Amitrole,Biomass reduction,96
+Waterhemp,12.159,fl oz/A,212.3,g AE/ha,7,3,Tarnov,1,Amitrole,Biomass reduction,80
+Waterhemp,12.159,fl oz/A,212.3,g AE/ha,7,4,Tarnov,1,Amitrole,Biomass reduction,91
+Waterhemp,0,fl oz/A,0,g AE/ha,1,1,Tarnov,2,Amitrole,Biomass reduction,0
+Waterhemp,0,fl oz/A,0,g AE/ha,1,2,Tarnov,2,Amitrole,Biomass reduction,0
+Waterhemp,0,fl oz/A,0,g AE/ha,1,3,Tarnov,2,Amitrole,Biomass reduction,0
+Waterhemp,0,fl oz/A,0,g AE/ha,1,4,Tarnov,2,Amitrole,Biomass reduction,0
+Waterhemp,0.37828,fl oz/A,6.634375,g AE/ha,2,1,Tarnov,2,Amitrole,Biomass reduction,10
+Waterhemp,0.37828,fl oz/A,6.634375,g AE/ha,2,2,Tarnov,2,Amitrole,Biomass reduction,5
+Waterhemp,0.37828,fl oz/A,6.634375,g AE/ha,2,3,Tarnov,2,Amitrole,Biomass reduction,10
+Waterhemp,0.37828,fl oz/A,6.634375,g AE/ha,2,4,Tarnov,2,Amitrole,Biomass reduction,15
+Waterhemp,0.75656,fl oz/A,13.26875,g AE/ha,3,1,Tarnov,2,Amitrole,Biomass reduction,28
+Waterhemp,0.75656,fl oz/A,13.26875,g AE/ha,3,2,Tarnov,2,Amitrole,Biomass reduction,35
+Waterhemp,0.75656,fl oz/A,13.26875,g AE/ha,3,3,Tarnov,2,Amitrole,Biomass reduction,35
+Waterhemp,0.75656,fl oz/A,13.26875,g AE/ha,3,4,Tarnov,2,Amitrole,Biomass reduction,40
+Waterhemp,1.51312,fl oz/A,26.5375,g AE/ha,4,1,Tarnov,2,Amitrole,Biomass reduction,76
+Waterhemp,1.51312,fl oz/A,26.5375,g AE/ha,4,2,Tarnov,2,Amitrole,Biomass reduction,71
+Waterhemp,1.51312,fl oz/A,26.5375,g AE/ha,4,3,Tarnov,2,Amitrole,Biomass reduction,95
+Waterhemp,1.51312,fl oz/A,26.5375,g AE/ha,4,4,Tarnov,2,Amitrole,Biomass reduction,90
+Waterhemp,3.0301,fl oz/A,53.075,g AE/ha,5,1,Tarnov,2,Amitrole,Biomass reduction,85
+Waterhemp,3.0301,fl oz/A,53.075,g AE/ha,5,2,Tarnov,2,Amitrole,Biomass reduction,96
+Waterhemp,3.0301,fl oz/A,53.075,g AE/ha,5,3,Tarnov,2,Amitrole,Biomass reduction,73
+Waterhemp,3.0301,fl oz/A,53.075,g AE/ha,5,4,Tarnov,2,Amitrole,Biomass reduction,93
+Waterhemp,6.0602,fl oz/A,106.15,g AE/ha,6,1,Tarnov,2,Amitrole,Biomass reduction,91
+Waterhemp,6.0602,fl oz/A,106.15,g AE/ha,6,2,Tarnov,2,Amitrole,Biomass reduction,100
+Waterhemp,6.0602,fl oz/A,106.15,g AE/ha,6,3,Tarnov,2,Amitrole,Biomass reduction,94
+Waterhemp,6.0602,fl oz/A,106.15,g AE/ha,6,4,Tarnov,2,Amitrole,Biomass reduction,95
+Waterhemp,12.159,fl oz/A,212.3,g AE/ha,7,1,Tarnov,2,Amitrole,Biomass reduction,89
+Waterhemp,12.159,fl oz/A,212.3,g AE/ha,7,2,Tarnov,2,Amitrole,Biomass reduction,88
+Waterhemp,12.159,fl oz/A,212.3,g AE/ha,7,3,Tarnov,2,Amitrole,Biomass reduction,97
+Waterhemp,12.159,fl oz/A,212.3,g AE/ha,7,4,Tarnov,2,Amitrole,Biomass reduction,97

@@ -1,0 +1,104 @@
+---
+title: "POSTER"
+author: "Maxwel C. Oliveira"
+date: "April 17, 2017"
+output: html_document
+---
+
+
+```{r loadData, message=FALSE, warning=FALSE, include=FALSE}
+Mesot=read.csv("Total.csv")
+str(Mesot)
+```
+
+
+```{r LoadPackage drc, warning=FALSE, echo=FALSE, include=FALSE}
+library(drc)
+library(ggplot2)
+```
+
+
+```{r fit the model, echo=FALSE, warning=FALSE}
+Model=drm(y~h, TRT,  fct=W1.3 (fixed =c(NA,NA,NA)), data= Mesot)
+summary(Model)
+plot(Model)
+```
+
+
+```{r Model selection, warning=FALSE, echo=FALSE, include=FALSE}
+mselect(Model, list(LL.3(), AR.3(), LL.5(), W2.3(), l4(), W2.4(), l3())
+, nested = FALSE, sorted = c("IC", "Res var", "Lack of fit", "no"), linreg = FALSE, icfct = AIC)
+```
+
+
+
+```{r}
+ED(Model, c(50,90), type="relative", interval="delta")
+EDcomp(Model, c(50,50), type="absolute", level=0.95)
+```
+
+
+```{r, include=FALSE}
+Mesot$TRTB <-factor(Mesot$TRT, levels=c("Aminotriazole", "Malathion", "Piperonyl butoxide", "R", "S"), labels=c("amitrole fb mesotrione-R", "malathion fb mesotrione-R", "PBO fb mesotrione-R", "mesotrione-R", "mesotrione-S"))
+str(Mesot)
+
+
+library(drc)
+Full=drm(y~h, TRTB,  fct=W1.3 (fixed =c(NA,NA,NA)), data= Mesot)
+summary(Full)
+#plot(Full)
+
+
+EDcomp(Full, c(90,90), type="absolute", level=0.95)
+ED(Full, c(80), type="absolute")
+EDcomp(Full, c(50,50), type="absolute")
+
+
+# predictions and confidence intervals
+newdata <- expand.grid(h=exp(seq(log(0.5), log(336), length=336)))
+#newdata <- data.frame(h=exp(seq(log(0.5), log(100), length=100)))
+newdata1 <- data.frame(TRTB=c("amitrole fb mesotrione-R"), newdata)
+newdata2 <- data.frame(TRTB=c("malathion fb mesotrione-R"), newdata)
+newdata3 <- data.frame(TRTB=c("PBO fb mesotrione-R"), newdata)
+newdata4 <- data.frame(TRTB=c("mesotrione-R"), newdata)
+newdata5 <- data.frame(TRTB=c("mesotrione-S"), newdata)
+
+nd=rbind(newdata1, newdata2, newdata3, newdata4, newdata5)
+
+pm <- predict(Full, newdata=nd, interval="confidence")
+
+
+nd$p <- pm[,1] 
+nd$pmin <- pm[,2] 
+nd$pmax <- pm[,3] 
+
+
+Mesot$h0 <- Mesot$h
+Mesot$h0[Mesot$h0==0] <- 0.5
+```
+
+
+
+```{r, echo=FALSE}
+library(ggplot2)
+ggplot(Mesot, aes(x = h0, y = y)) +  
+geom_line(data=nd, aes(x=h, y=p, linetype=TRTB, color=TRTB), size=1.3) + coord_trans(x="log") +
+  labs(fill="", y="Mesotrione Metabolism (%)", x="Hours After Treatment") +
+  #scale_color_brewer(palette="Set1") +
+  scale_colour_manual(values = c("red","blue", "green3", "purple", "orange"))+
+  scale_x_continuous(breaks=c(1, 12, 24, 72, 168, 336)) +
+  theme(axis.text=element_text(size=18, color="black"), 
+        axis.title=element_text(size=20,face="bold"), 
+        panel.background = element_rect(fill="white", color = "black"), 
+        panel.grid.major = element_line(color = "white"), 
+  panel.grid.minor = element_blank(),
+  legend.position=c(0.30,0.88), legend.text = element_text(size = 16, colour = "black"), legend.key = element_rect(fill=NA),
+legend.background = element_rect(fill =NA),  legend.title=element_blank())  + ylim(0,100) + 
+ggsave("Meso_poster.tiff", units="in", width=6, height=6, dpi=500)
+
+```
+
+```{r}
+ED(Full, c(80), type="absolute", interval="delta")
+EDcomp(Full, c(50,50), type="absolute", level=0.95)
+```

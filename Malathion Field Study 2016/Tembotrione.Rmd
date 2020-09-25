@@ -1,0 +1,62 @@
+---
+title: "Tembotrione"
+author: "Maxwel C. Oliveira"
+date: "November 4, 2016"
+output: word_document
+---
+
+
+```{r}
+library(ggplot2)
+```
+
+
+```{r}
+Data=read.csv("biomass.csv")
+Data$TRT=as.factor(Data$TRT)
+str(Data)
+```
+
+
+
+```{r, echo=FALSE}
+Tembo<-Data[(Data$Group1 == 'Tembo'),]
+str(Tembo)
+```
+
+```{r}
+X11()
+Tembo$TRT <-factor(Tembo$TRT, levels=c("9", "6", "12", "3", "1"), labels=c("Aminotriozole fb Tembotrione", "Malathion fb Mesotrione", "Piperonyl butoxide fb Mesotrione", "Tembotrione", "Control"))
+
+
+ggplot(Tembo, aes(y=Biomass, x=TRT)) + ggtitle("P450 inhibitors fb Tembotrione in Field Study") + geom_boxplot(aes(fill=factor(TRT))) + labs(x="", y= expression(paste("HPPD-R Waterhemp Biomass (g m "^"-2",")"))) + scale_y_continuous(limits=c(0, 300)) +   
+  scale_color_brewer(palette=2) +
+  theme(axis.text=element_text(size=25, color="black", face="bold"), 
+        axis.title=element_text(size=30, face="bold"), 
+        panel.background = element_rect(colour = "black"), 
+        panel.grid.major = element_line(color = "white"), 
+    panel.grid.minor = element_blank(),
+       legend.position=c(0.28,0.87), legend.text = element_text(size = 20, colour = "black", face = "bold"), 
+    axis.text.x=element_blank(), axis.ticks.x=element_blank(),
+    legend.background = element_rect(colour = "black"), plot.title =  element_text(size=30, hjust=0.5, color="blue", face="italic"), 
+    legend.key = element_rect(size = 4), legend.key.size = unit(2, 'lines'), legend.title=element_blank())
+```
+
+```{r}
+X11()
+library(ggplot2)
+Herb<-data.frame(trt=c("Aminotriozole fb Tembotrione", "Malathion fb Tembotrione", "Piperonyl butoxide fb Tembotrione", "Tembotrione", "Control"), y=c(55.7, 20.9, 21.3, 137.9, 228.3))
+
+Herb$trt <- factor(Herb$trt, levels = c("Aminotriozole fb Tembotrione", "Malathion fb Tembotrione", "Piperonyl butoxide fb Tembotrione", "Tembotrione", "Control"))
+
+ggplot(Herb, aes(fill=trt, y=y, x=trt)) +  ggtitle("P450 inhibitors fb Tembotrione in Field Study") + geom_bar(stat = "identity", position = "dodge")  + labs(x="", y= expression(paste("HPPD-R Waterhemp Biomass (g m "^"-2",")"))) + scale_y_continuous(limits=c(0, 300)) +  scale_color_brewer(palette="Set2") +  
+   theme(axis.text=element_text(size=25, color="black"), 
+        axis.title=element_text(size=30, face="bold"), 
+        panel.background = element_rect(colour = "black"), 
+        panel.grid.major = element_line(color = "white"), 
+    panel.grid.minor = element_blank(),
+       legend.position=c(0.26,0.87), legend.text = element_text(size = 20, colour = "black", face = "bold"), 
+    axis.text.x=element_blank(), axis.ticks.x=element_blank(),
+    legend.background = element_rect(colour = "black"), plot.title =  element_text(size=30, hjust=0.5, color="blue", face="italic"),legend.key = element_rect(size = 4),legend.key.size = unit(2, 'lines'), legend.title=element_blank())
+```
+

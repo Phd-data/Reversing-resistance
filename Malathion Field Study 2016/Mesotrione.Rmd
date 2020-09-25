@@ -1,0 +1,74 @@
+---
+title: "Mesotrione"
+author: "Maxwel C. Oliveira"
+date: "November 4, 2016"
+output: word_document
+---
+
+```{r}
+library(ggplot2)
+```
+
+```{r}
+Data=read.csv("biomass.csv")
+Data$TRT=as.factor(Data$TRT)
+str(Data)
+```
+
+
+
+```{r, echo=FALSE}
+Mesotrione<-Data[(Data$Group2 == 'Mesotrione'),]
+str(Mesotrione)
+```
+
+```{r}
+X11()
+Mesotrione$TRT <-factor(Mesotrione$TRT, levels=c("8", "5", "11", "2", "1"), labels=c("Aminotriazole fb Mesotrione", "Malathion fb Mesotrione", "Piperonyl butoxide fb Mesotrione", "Mesotrione", "Control"))
+
+ggplot(Mesotrione, aes(y=Biomass, x=TRT)) + ggtitle("P450 inhibitors fb Mesotrione in Field Study") + geom_boxplot(aes(fill=factor(TRT))) + labs(x="", y= expression(paste("HPPD-R Waterhemp Biomass (g m "^"-2",")"))) + scale_y_continuous(limits=c(0, 300)) +   scale_color_brewer(palette="Set1") +  
+   theme(axis.text=element_text(size=25, color="black"), 
+        axis.title=element_text(size=30, face="bold"), 
+        panel.background = element_rect(colour = "black"), 
+        panel.grid.major = element_line(color = "white"), 
+    panel.grid.minor = element_blank(),
+       legend.position=c(0.7,0.2), legend.text = element_text(size = 20, colour = "black", face = "bold"), 
+    axis.text.x=element_blank(), axis.ticks.x=element_blank(),
+    legend.background = element_rect(colour = "black"), plot.title =  element_text(size=30, hjust=0.5, color="blue", face="italic"),legend.key = element_rect(size = 4),legend.key.size = unit(2, 'lines'), legend.title=element_blank())
+```
+
+```{r}
+X11()
+library(ggplot2)
+Herbicide<-data.frame(trt=c("Aminotriozole fb Mesotrione", "Malathion fb Mesotrione", "Piperonyl butoxide fb Mesotrione", "Mesotrione", "Control"), y=c(68.7, 199.2, 178.4, 224.9, 228.3))
+
+Herbicide$trt <- factor(Herbicide$trt, levels = c("Aminotriozole fb Mesotrione", "Malathion fb Mesotrione", "Piperonyl butoxide fb Mesotrione", "Mesotrione", "Control"))
+
+ggplot(Herbicide, aes(fill=trt, y=y, x=trt)) +  ggtitle("P450 inhibitors fb Mesotrione in Field Study") + geom_bar(stat = "identity", position = "dodge")  + labs(x="", y= expression(paste("HPPD-R Waterhemp Biomass (g m "^"-2",")"))) + scale_y_continuous(limits=c(0, 300)) +  scale_color_brewer(palette="Set2") +  
+   theme(axis.text=element_text(size=25, color="black"), 
+        axis.title=element_text(size=30, face="bold"), 
+        panel.background = element_rect(colour = "black"), 
+        panel.grid.major = element_line(color = "white"), 
+    panel.grid.minor = element_blank(),
+       legend.position=c(0.25,0.87), legend.text = element_text(size = 20, colour = "black", face = "bold"), 
+    axis.text.x=element_blank(), axis.ticks.x=element_blank(),
+    legend.background = element_rect(colour = "black"), plot.title =  element_text(size=30, hjust=0.5, color="blue", face="italic"),legend.key = element_rect(size = 4),legend.key.size = unit(2, 'lines'), legend.title=element_blank())
+```
+
+
+```{r}
+X11()
+library(ggplot2)
+Herbicide<-data.frame(trt=c("aminotriozole fb mesotrione", "malathion fb mesotrione", "piperonyl butoxide fb mesotrione", "mesotrione", "untreated check"), y=c(68.7, 199.2, 178.4, 224.9, 228.3))
+
+Herbicide$trt <- factor(Herbicide$trt, levels = c("aminotriozole fb mesotrione", "malathion fb mesotrione", "piperonyl butoxide fb mesotrione", "mesotrione", "untreated check"))
+
+ggplot(Herbicide, aes(fill=trt, y=y, x=trt)) + geom_bar(stat = "identity", position = "dodge", width=.6)  + labs(x="", y= expression(paste("HPPD-R Waterhemp Biomass (g m "^"-2",")"))) + scale_y_continuous(limits=c(0, 350)) +   scale_colour_grey() +  
+   theme(axis.text=element_text(size=20, color="black"), 
+        axis.title=element_text(size=26, face="bold"), 
+        panel.background = element_rect(color = "black", fill = "white"), 
+        panel.grid.major = element_line(color = "white"), 
+    panel.grid.minor = element_blank(),
+       legend.position=c(0.36,0.88), legend.text = element_text(size = 18, colour = "black", face = "bold"), 
+    axis.text.x=element_blank(), axis.ticks.x=element_blank(),
+    legend.background = element_rect(colour = "black"), legend.key = element_rect(size = 2),legend.key.size = unit(1.2, 'lines'), legend.title=element_blank())

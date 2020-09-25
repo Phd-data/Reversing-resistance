@@ -1,0 +1,31 @@
+Type,Rate,Rateunit,RateM,RateunitM,Trt,Rep,DAT,Herbicide,IR,Number,Biomass,BP,BR
+Control,0,fl oz/A,0,g AE/ha,1,1,21,mesotrione,0,460,195.6,0.425217391,31.29454219
+Waterhemp,0,fl oz/A,0,g AE/ha,1,2,21,mesotrione,0,268,184.4,0.688059701,-11.17479613
+Waterhemp,0,fl oz/A,0,g AE/ha,1,3,21,mesotrione,0,304,226,0.743421053,-20.11993114
+Waterhemp,3,fl oz/A,105,g AE/ha,2,1,21,mesotrione,40,288,134.5,0.467013889,24.54117895
+Waterhemp,3,fl oz/A,105,g AE/ha,2,2,21,mesotrione,20,220,142.6,0.648181818,-4.731437308
+Waterhemp,3,fl oz/A,105,g AE/ha,2,3,21,mesotrione,40,212,116.8,0.550943396,10.98007975
+Waterhemp,6,fl oz/A,210,g AE/ha,3,1,21,mesotrione,40,328,86.4,0.263414634,57.43818714
+Waterhemp,6,fl oz/A,210,g AE/ha,3,2,21,mesotrione,30,140,76.5,0.546428571,11.70957274
+Waterhemp,6,fl oz/A,210,g AE/ha,3,3,21,mesotrione,50,184,80,0.434782609,29.74902065
+Waterhemp,12,fl oz/A,420,g AE/ha,4,1,21,mesotrione,65,160,15.6,0.0975,84.24621788
+Waterhemp,12,fl oz/A,420,g AE/ha,4,2,21,mesotrione,70,40,3.2,0.08,87.0738198
+Waterhemp,12,fl oz/A,420,g AE/ha,4,3,21,mesotrione,60,108,16.8,0.155555556,74.86576072
+Waterhemp,24,fl oz/A,840,g AE/ha,5,1,21,mesotrione,85,44,2.8,0.063636364,89.7178112
+Waterhemp,24,fl oz/A,840,g AE/ha,5,2,21,mesotrione,85,24,1.6,0.066666667,89.22818317
+Waterhemp,24,fl oz/A,840,g AE/ha,5,3,21,mesotrione,80,64,6.8,0.10625,82.83241692
+Waterhemp,0,fl oz/A,0,g AE/ha,16,1,21,malathion fb mesotrione,0,332,247.2,0.744578313,-15.15498482
+Waterhemp,0,fl oz/A,0,g AE/ha,16,2,21,malathion fb mesotrione,0,368,198,0.538043478,16.78727748
+Waterhemp,0,fl oz/A,0,g AE/ha,16,3,21,malathion fb mesotrione,0,392,257.6,0.657142857,-1.632392983
+Waterhemp,3,fl oz/A,105,g AE/ha,17,1,21,malathion fb mesotrione,30,284,132.5,0.466549296,27.844424
+Waterhemp,3,fl oz/A,105,g AE/ha,17,2,21,malathion fb mesotrione,20,244,152.8,0.626229508,3.148603408
+Waterhemp,3,fl oz/A,105,g AE/ha,17,3,21,malathion fb mesotrione,20,256,143.5,0.560546875,13.30694739
+Waterhemp,6,fl oz/A,210,g AE/ha,18,1,21,malathion fb mesotrione,40,236,72.8,0.308474576,52.29194228
+Waterhemp,6,fl oz/A,210,g AE/ha,18,2,21,malathion fb mesotrione,40,212,60,0.283018868,56.22887095
+Waterhemp,6,fl oz/A,210,g AE/ha,18,3,21,malathion fb mesotrione,50,220,58.4,0.265454545,58.94533374
+Waterhemp,12,fl oz/A,420,g AE/ha,19,1,21,malathion fb mesotrione,50,192,35.6,0.185416667,71.32383115
+Waterhemp,12,fl oz/A,420,g AE/ha,19,2,21,malathion fb mesotrione,60,164,53.6,0.326829268,49.45324251
+Waterhemp,12,fl oz/A,420,g AE/ha,19,3,21,malathion fb mesotrione,50,68,22,0.323529412,49.96359169
+Waterhemp,24,fl oz/A,840,g AE/ha,20,1,21,malathion fb mesotrione,90,16,2,0.125,80.66775133
+Waterhemp,24,fl oz/A,840,g AE/ha,20,2,21,malathion fb mesotrione,80,104,14.4,0.138461538,78.58581686
+Waterhemp,24,fl oz/A,840,g AE/ha,20,3,21,malathion fb mesotrione,80,56,8.8,0.157142857,75.69660168

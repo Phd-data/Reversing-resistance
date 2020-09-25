@@ -1,0 +1,100 @@
+---
+title: "Amitrol"
+author: "Maxwel C. Oliveira"
+date: "March 24, 2017"
+output: html_document
+---
+
+```{r}
+library(drc)
+library(ggplot2)
+library(cowplot)
+```
+
+
+```{r}
+Amitr=read.csv("amitrol.csv")
+str(Amitr)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+MA=drm(Y~RateM, TRT, fct=l3 (fixed =c(NA,NA,NA)), data= Amitr)
+summary(MA)
+```
+
+```{r}
+# predictions and confidence intervals
+newdata <- expand.grid(RateM=exp(seq(log(0.5), log(213), length=213)))
+newdata1 <- data.frame(TRT=c("Control"), newdata)
+newdata2 <- data.frame(TRT=c("Biomass reduction"), newdata)
+
+nd=rbind(newdata1, newdata2)
+
+pm <- predict(MA, newdata=nd, interval="confidence")
+
+
+nd$p <- pm[,1] 
+nd$pmin <- pm[,2] 
+nd$pmax <- pm[,3] 
+
+
+Amitr$RateM0 <- Amitr$RateM
+Amitr$RateM0[Amitr$RateM0==0] <- 0.5
+```
+
+```{r, echo=FALSE}
+A<-ggplot(Amitr, aes(x = RateM0, y = Y)) +  
+geom_line(data=nd, aes(x=RateM, y=p, linetype=TRT), size=1.4) + coord_trans(x="log") +
+  labs(fill="", y="(%)", x=expression(bold(paste("amitrole (g ai ha "^"-1",")")))) +
+  geom_vline(xintercept=13, linetype="dotted", color = "green", size=1) +
+  scale_x_continuous(breaks=c(0, 1, 7, 13, 27, 53, 106, 212)) +
+  theme(axis.text=element_text(size=16, color="black"), 
+        axis.title=element_text(size=20,face="bold"), 
+        panel.background = element_rect(fill="white", color = "black"), 
+        panel.grid.major = element_line(color = "white"), 
+  panel.grid.minor = element_blank(), panel.border = element_rect(fill=NA,color="black", size=0.5, 
+                                    linetype="solid"),
+  legend.position=c(0.20,0.93), legend.text = element_text(size = 12, colour = "black"), legend.key = element_rect(fill=NA), legend.key.width = unit(1,"cm"),
+legend.background = element_rect(fill =NA),  legend.title=element_blank())  + ylim(0,100) +
+ggsave("aminotriozole.tiff", units="in", width=6, height=6, dpi=500)
+
+```
+
+
+
+
+```{r}
+PBO=read.csv("pbo.csv")
+
+```
+
+```{r}
+PBO$TRT<-factor(PBO$TRT, levels=c("Control", "RedBio"), labels=c("Control", "Biomass Reduction"))
+
+
+B<-ggplot(PBO, aes(x = RateM, y = Y)) + #geom_point(aes(color=TRT, shape=TRT), color="black") + 
+  #geom_line() +
+  stat_summary(fun.y = "mean", geom = "point",  aes(shape= TRT), size=2.4) +
+  geom_smooth(aes(linetype=TRT), method="gam", color="black", se=F, size=1.4) +
+  scale_shape(solid = T) +   labs(fill="", y="(%)", x=expression(bold(paste("piperonyl butoxide (g ai ha "^"-1",")")))) +
+  geom_vline(xintercept=2000, linetype="dotted", color = "green", size=1) +
+  scale_x_continuous(breaks=c(0, 2000, 4500, 9000, 18000)) +
+  theme(axis.text=element_text(size=16, color="black"), 
+        axis.title=element_text(size=20,face="bold"), 
+        panel.background = element_rect(fill="white", color = "black"), 
+        panel.grid.major = element_line(color = "white"), 
+  panel.grid.minor = element_blank(), panel.border = element_rect(fill=NA,color="black", size=0.5, 
+                                    linetype="solid"),
+  legend.position=c(0.70,0.20), legend.text = element_text(size = 12, colour = "black"), legend.key = element_rect(fill=NA), legend.key.width = unit(1,"cm"),
+legend.background = element_rect(fill =NA),  legend.title=element_blank())  +
+ggsave("pbo.tiff", units="in", width=6, height=6, dpi=500)
+```
+
+
+
+```{r vertical, include=FALSE}
+plot_grid(A,B, ncol=2, labels = c("A", "B"), label_size = 18,
+          hjust = -1, vjust = 1.5) + ggsave("allhor.tiff",  units="in", width=12, height=6, dpi=800)
+```

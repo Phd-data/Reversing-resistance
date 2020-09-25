@@ -1,0 +1,75 @@
+---
+title: "Corn"
+author: "Maxwel C. Oliveira"
+date: "May 23, 2017"
+output: html_document
+---
+
+```{r, include=FALSE}
+library(drc)
+library(ggplot2)
+```
+
+
+
+```{r}
+Corn=read.csv("Corn.csv")
+str(Corn)
+
+Corn$DAT<-factor(Corn$DAT, levels=c("7", "14", "21"), labels=c("7 DAT", "14 DAT", "21 DAT"))
+
+str(Corn)
+```
+
+
+```{r}
+Crn=drm(IRC~RateM, DAT,  fct=l3 (fixed =c(NA,100,NA)), data= Corn)
+summary(Crn)
+
+ED(Crn, c(10,30,50))
+```
+
+
+
+```{r}
+Crn=drm(IRC~RateM, DAT,  fct=l3 (fixed =c(NA,100,NA)), data= Corn)
+summary(Crn)
+
+# predictions and confidence intervals
+newdata <- expand.grid(RateM=seq(0,850))
+
+newdata1 <- data.frame(DAT=c("7 DAT"), newdata)
+newdata2 <- data.frame(DAT=c("14 DAT"), newdata)
+newdata3 <- data.frame(DAT=c("21 DAT"), newdata)
+
+nd=rbind(newdata1, newdata2, newdata3)
+
+pm <- predict(Crn, newdata=nd, interval="confidence")
+
+
+nd$p <- pm[,1] 
+nd$pmin <- pm[,2] 
+nd$pmax <- pm[,3] 
+
+
+
+
+ggplot(Corn, aes(x = RateM, y = IRC)) +  
+geom_line(data=nd, aes(x=RateM, y=p, linetype=DAT, color=DAT), size=1.3) +
+  labs(fill="", y="Corn injury (%)", x=expression(bold(paste("Mesotrione (g ai ha "^"-1",")")))) +
+  scale_colour_manual(values = c("red", "black", "blue"))+
+  scale_x_continuous(breaks=c(0, 105, 210, 420, 840)) +
+  theme(axis.text=element_text(size=18, color="black"), 
+        axis.title=element_text(size=20,face="bold"), 
+        panel.background = element_rect(fill="white", color = "black"), 
+        panel.grid.major = element_line(color = "white"), 
+  panel.grid.minor = element_blank(), panel.border = element_rect(fill=NA,color="black", size=0.5, 
+                                    linetype="solid"), 
+  legend.position=c(0.12,0.92), legend.text = element_text(size = 14, colour = "black"), legend.key = element_rect(fill=NA), legend.key.height  = unit(1.5, "line"), legend.key.width = unit(2.2, "line"),
+legend.background = element_rect(fill =NA),  legend.title=element_blank())  + ylim(0,100) + ggsave("Corn.tiff", units="in", width=6, height=6, dpi=1000)
+```
+
+```{r}
+ED(Crn, c(10, 30, 50))
+```
+

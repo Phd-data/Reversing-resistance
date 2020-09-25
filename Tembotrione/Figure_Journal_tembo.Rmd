@@ -1,0 +1,81 @@
+---
+title: "Figues.Pest_Manag_Sci"
+author: "Maxwel C. Oliveira"
+date: "March 7, 2017"
+output: html_document
+---
+
+```{r LoadPackage drc, warning=FALSE, echo=FALSE, include=FALSE}
+library(drc)
+```
+
+
+```{r loadData, message=FALSE, warning=FALSE, include=FALSE}
+Tembo=read.csv("Tembotrione.csv")
+str(Tembo)
+```
+
+
+
+```{r fit the model, echo=FALSE, warning=FALSE}
+Model=drm(y~h, TRT,  fct=W1.3 (fixed =c(NA,NA,NA)), data= Tembo)
+summary(Model)
+plot(Model, col=c(1,2,3,4,5))
+```
+
+```{r Model selection, warning=FALSE, echo=FALSE, include=FALSE}
+mselect(Model, list(LL.3(), LL.5(), W1.3(), l4(), W2.4(), l3())
+, nested = FALSE, sorted = c("IC", "Res var", "Lack of fit", "no"), linreg = FALSE, icfct = AIC)
+```
+
+```{r}
+ED(Model, c(50), type="absolute", interval="delta")
+EDcomp(Model, c(80,80), type="absolute", level=0.95)
+```
+
+
+```{r, include=FALSE}
+Tembo$TRTB <-factor(Tembo$TRT, levels=c("Aminotriozole", "Malathion", "Piperonyl butoxide", "R", "S"), labels=c("amitrole fb tembotrione-R", "malathion fb tembotrione-R", "piperonyl butoxide fb tembotrione-R", "tembotrione-R", "tembotrione-S"))
+str(Tembo)
+
+Model=drm(y~h, TRTB,  fct=W1.3 (fixed =c(NA,NA,NA)), data= Tembo)
+ED(Model, c(80), type="absolute", interval = "delta")
+EDcomp(Model, c(50,50), type="absolute")
+
+# predictions and confidence intervals
+newdata <- expand.grid(h=exp(seq(log(0.5), log(336), length=336)))
+#newdata <- data.frame(h=seq(0,336, 1))
+newdata6 <- data.frame(TRTB=c("amitrole fb tembotrione-R"), newdata)
+newdata7 <- data.frame(TRTB=c("malathion fb tembotrione-R"), newdata)
+newdata8 <- data.frame(TRTB=c("piperonyl butoxide fb tembotrione-R"), newdata)
+newdata9 <- data.frame(TRTB=c("tembotrione-R"), newdata)
+newdata10 <- data.frame(TRTB=c("tembotrione-S"), newdata)
+
+nd=rbind(newdata6, newdata7, newdata8, newdata9, newdata10)
+
+pm <- predict(Model, newdata=nd, interval="confidence") 
+nd$p <- pm[,1] 
+nd$pmin <- pm[,2] 
+nd$pmax <- pm[,3] 
+
+Tembo$h0 <- Tembo$h
+Tembo$h0[Tembo$h0==0] <- 0.5
+```
+
+
+```{r, echo=FALSE}
+library(ggplot2)
+ggplot(Tembo, aes(x = h0, y = y)) +  
+geom_line(data=nd, aes(x=h, y=p, linetype=TRTB, color=TRTB), size=1.3) + coord_trans(x="log") + scale_color_brewer(palette="Set1") +
+  labs(fill="", y="Tembotrione metabolism (%)", x="Hours after treatment") +
+   #scale_colour_manual(values = c("red","blue", "green", "purple", "orange")) +
+  scale_x_continuous(breaks=c(12, 24, 72, 168, 336), limits=c(12,336)) +
+  theme(axis.text=element_text(size=16, color="black"), 
+        axis.title=element_text(size=18,face="bold"), 
+        panel.background = element_rect(fill="white", color = "black"), 
+        panel.grid.major = element_line(color = "white"), 
+  panel.grid.minor = element_blank(),
+  legend.position=c(0.69,0.15), legend.text = element_text(size = 12, colour = "black"), legend.key = element_rect(fill=NA),
+legend.background = element_rect(fill =NA), legend.key.width = unit(2.2, "line"), legend.title=element_blank())  + ylim(0,100) +
+ggsave("Tembot.tiff", units="in", width=6, height=6, dpi=500)
+```

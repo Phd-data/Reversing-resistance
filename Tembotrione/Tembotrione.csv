@@ -1,0 +1,121 @@
+TRT,P450inhib,Herbicide,Biotype,h,rep,Conc,ConcX,Totalamount,Fresh wg. (g),X,y
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,0,21,0,0,0,0,0,0
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,0,22,0,0,0,0,0,0
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,0,23,0,0,0,0,0,0
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,0,24,0,0,0,0,0,0
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,12,1,647.304,0,3236.52,0.769,4208.738622,0
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,12,2,354.168,0,1770.84,0.384,4611.5625,0
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,12,3,575.5,0,2877.5,0.78,3689.102564,0
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,12,4,98.436,0,492.18,0.858,573.6363636,0
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,24,5,66.271,39.17794352,331.355,0.269,1231.802974,42.33893745
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,24,6,74.279,42.26605102,371.395,0.309,1201.925566,43.25240733
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,24,7,621.212,36.68699206,3106.06,0.515,6031.184466,45.60296555
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,24,8,187.592,55.2128198,937.96,0.479,1958.162839,40.13125903
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,72,9,64.864,84.5138617,324.32,1.126,288.0284192,91.19383819
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,72,10,21.289,94.91729776,106.445,0.615,173.0813008,94.70822377
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,72,11,17.473,95.82835942,87.365,0.831,105.1323706,96.78568986
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,72,12,15.563,96.28436775,77.815,0.767,101.4537158,96.89816081
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,168,13,6.134,98.5355209,30.67,3.622,8.467697405,99.74110918
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,168,14,9.233,97.79564142,46.165,3.615,12.77040111,99.6095586
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,168,15,7.095,98.30608425,35.475,0.336,105.5803571,96.77199315
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,168,16,18.18,95.65956471,90.9,0.764,118.9790576,96.36234217
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,336,17,11.812,97.1799108,59.06,0.308,191.7532468,94.13734893
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,336,18,7.945,98.10314861,39.725,0.171,232.3099415,92.89737123
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,336,19,14.9,96.44265755,74.5,0.139,535.971223,98.61325132
+Aminotriozole,Aminotriozole,Tembotrione,Resistant,336,20,12.79,96.94641544,63.95,0.07,913.5714286,92.06852764
+Malathion,Malathion,Tembotrione,Resistant,0,21,0,0,0,0,0,0
+Malathion,Malathion,Tembotrione,Resistant,0,22,0,0,0,0,0,0
+Malathion,Malathion,Tembotrione,Resistant,0,23,0,0,0,0,0,0
+Malathion,Malathion,Tembotrione,Resistant,0,24,0,0,0,0,0,0
+Malathion,Malathion,Tembotrione,Resistant,12,1,752.719,0,3763.595,0.769,4894.141743,0
+Malathion,Malathion,Tembotrione,Resistant,12,2,540.108,0,2700.54,0.384,7032.65625,0
+Malathion,Malathion,Tembotrione,Resistant,12,3,510.199,0,2550.995,0.78,3270.50641,0
+Malathion,Malathion,Tembotrione,Resistant,12,4,688.995,0,3444.975,0.858,4015.122378,0
+Malathion,Malathion,Tembotrione,Resistant,24,5,451.793,12.4816705,2258.965,0.509,4438.045187,7.600534682
+Malathion,Malathion,Tembotrione,Resistant,24,6,551.51,11.47586638,2757.55,0.609,4527.996716,5.727756722
+Malathion,Malathion,Tembotrione,Resistant,24,7,710.662,5.93001423,3553.31,0.815,4359.889571,9.227723418
+Malathion,Malathion,Tembotrione,Resistant,24,8,668.207,7.744563549,3341.035,0.729,4583.038409,4.581796558
+Malathion,Malathion,Tembotrione,Resistant,72,9,232.514,62.67864516,1162.57,1.126,1032.477798,78.50396009
+Malathion,Malathion,Tembotrione,Resistant,72,10,109.3,82.45600659,546.5,0.615,888.6178862,81.49910285
+Malathion,Malathion,Tembotrione,Resistant,72,11,51.047,91.80632908,255.235,0.831,307.1419976,73.966574
+Malathion,Malathion,Tembotrione,Resistant,72,12,218.714,64.89371478,1093.57,0.767,1425.77575,70.31555304
+Malathion,Malathion,Tembotrione,Resistant,168,13,178.826,71.29622904,894.13,0.622,1437.508039,70.07128847
+Malathion,Malathion,Tembotrione,Resistant,168,14,139.175,77.6607019,695.875,0.615,1131.504065,76.44224738
+Malathion,Malathion,Tembotrione,Resistant,168,15,141.994,77.20821775,709.97,0.336,2113.005952,88.9874654
+Malathion,Malathion,Tembotrione,Resistant,168,16,47.919,92.30841153,239.595,0.764,313.6060209,93.47076755
+Malathion,Malathion,Tembotrione,Resistant,336,17,9.925,98.40691551,49.625,0.308,161.1201299,96.64550197
+Malathion,Malathion,Tembotrione,Resistant,336,18,44.982,92.77983612,224.91,0.171,1315.263158,90.5679716
+Malathion,Malathion,Tembotrione,Resistant,336,19,10.286,98.34897057,51.43,0.139,370,92.29665298
+Malathion,Malathion,Tembotrione,Resistant,336,20,12.856,97.93645399,64.28,0.07,918.2857143,93.17
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,0,21,0,0,0,0,0,0
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,0,22,0,0,0,0,0,0
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,0,23,0,0,0,0,0,0
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,0,24,0,0,0,0,0,0
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,12,1,897.249,0,4486.245,0.812,5524.932266,0
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,12,2,825.725,0,4128.625,0.711,5806.786217,0
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,12,3,689.065,0,3445.325,0.708,4866.278249,0
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,12,4,683.38,0,3416.9,0.647,5281.14374,0
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,24,5,628.59,9.80784705,3142.95,0.881,3567.480136,33.56381945
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,24,6,"1,306.23",13.35815724,6531.155,1.46,4473.393836,31.69324308
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,24,7,738.93,5.731259522,3694.65,0.648,5701.62037,33.8203253
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,24,8,179.85,12.94430186,899.25,0.564,1594.414894,30.30765927
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,72,9,47.561,93.93242179,237.805,0.516,460.8624031,91.41748891
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,72,10,62.34,92.04699595,311.7,1.446,215.560166,95.98568358
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,72,11,92.181,88.24004065,460.905,7.801,59.0828099,98.89971743
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,72,12,400.738,48.87598755,2003.69,1.155,1734.796537,95.2446476
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,168,13,31.181,96.02209465,155.905,1.4,111.3607143,97.9261607
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,168,14,18.453,97.64586487,92.265,1.295,71.24710425,95.67318519
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,168,15,92.757,88.16655764,463.785,0.784,591.5625,98.98349772
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,168,16,18.451,97.64612002,92.255,2.121,43.49599246,99.18998635
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,336,17,8.258,98.94648849,41.29,0.046,897.6086957,98.28408538
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,336,18,8.043,98.97391704,40.215,0.135,297.8888889,94.45249889
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,336,19,36.177,95.38473167,180.885,0.023,7864.565217,96.264654
+Piperonyl butoxide,Piperonyl butoxide,Tembotrione,Resistant,336,20,6.609,99.1568591,33.045,0.049,674.3877551,97.44106626
+R,No app.,Tembotrione,Resistant,0,21,0,0,0,0,0,0
+R,No app.,Tembotrione,Resistant,0,22,0,0,0,0,0,0
+R,No app.,Tembotrione,Resistant,0,23,0,0,0,0,0,0
+R,No app.,Tembotrione,Resistant,0,24,0,0,0,0,0,0
+R,No app.,Tembotrione,Resistant,12,1,534.76,0,2673.79,0.916,2918.984716,0
+R,No app.,Tembotrione,Resistant,12,2,"1,006.81",0,5034.055,1.143,4404.247594,0
+R,No app.,Tembotrione,Resistant,12,3,"2,241.96",0,11209.8,1.504,7453.324468,0
+R,No app.,Tembotrione,Resistant,12,4,"1,373.31",0,6866.55,1.119,6136.327078,0
+R,No app.,Tembotrione,Resistant,24,5,262.902,79.60751158,1314.51,1.065,1234.28169,79.42166244
+R,No app.,Tembotrione,Resistant,24,6,340.891,73.55814801,1704.455,1.03,1654.81068,72.41046916
+R,No app.,Tembotrione,Resistant,24,7,47.838,96.2893555,239.19,0.516,463.5465116,92.27160488
+R,No app.,Tembotrione,Resistant,24,8,338.944,73.70917073,1694.72,0.989,1713.569262,71.43082735
+R,No app.,Tembotrione,Resistant,72,9,11.273,99.12558854,56.365,0.926,60.86933045,98.98516713
+R,No app.,Tembotrione,Resistant,72,10,1.529,99.88140024,7.645,0.396,19.30555556,99.67813163
+R,No app.,Tembotrione,Resistant,72,11,58.921,95.42968174,294.605,2.311,127.4794461,97.87462206
+R,No app.,Tembotrione,Resistant,72,12,39.158,96.96263603,195.79,1.148,170.5487805,97.1565564
+R,No app.,Tembotrione,Resistant,168,13,6.475,99.49775444,32.375,1.333,24.28732183,99.59507403
+R,No app.,Tembotrione,Resistant,168,14,6.191,99.51978343,30.955,1.445,21.42214533,99.64284317
+R,No app.,Tembotrione,Resistant,168,15,9.147,99.29049573,45.735,1.367,33.45647403,99.44220301
+R,No app.,Tembotrione,Resistant,168,16,19.303,98.50272648,96.515,2.633,36.65590581,99.38886106
+R,No app.,Tembotrione,Resistant,336,17,5.679,99.55949768,28.395,0.157,180.8598726,96.98464659
+R,No app.,Tembotrione,Resistant,336,18,1.723,99.86635226,8.615,0.621,13.87278583,99.7687085
+R,No app.,Tembotrione,Resistant,336,19,1.962,99.84781378,9.81,0.337,29.10979228,99.51467227
+R,No app.,Tembotrione,Resistant,336,20,0.575,99.95539904,2.875,0.462,6.222943723,99.8962491
+S,No app.,Tembotrione,Susceptible,0,21,0,0,0,0,0,0
+S,No app.,Tembotrione,Susceptible,0,22,0,0,0,0,0,0
+S,No app.,Tembotrione,Susceptible,0,23,0,0,0,0,0,0
+S,No app.,Tembotrione,Susceptible,0,24,0,0,0,0,0,0
+S,No app.,Tembotrione,Susceptible,12,1,423.92,0,2119.6,0.676,3135.502959,0
+S,No app.,Tembotrione,Susceptible,12,2,288.61,0,1443.055,0.466,3096.684549,0
+S,No app.,Tembotrione,Susceptible,12,3,102.11,0,510.53,0.591,863.8409475,0
+S,No app.,Tembotrione,Susceptible,12,4,201.19,0,1005.95,0.615,1635.691057,0
+S,No app.,Tembotrione,Susceptible,24,5,171.49,33.08305538,857.455,0.68,1260.963235,37.34944995
+S,No app.,Tembotrione,Susceptible,24,6,127.44,30.40908844,637.175,0.597,1067.294807,46.9718
+S,No app.,Tembotrione,Susceptible,24,7,110.97,28.75664269,554.855,0.548,1012.509124,49.69381202
+S,No app.,Tembotrione,Susceptible,24,8,68.8,30.74,343.985,0.747,460.4886212,44.67958974
+S,No app.,Tembotrione,Susceptible,72,9,469.21,76.78,2346.045,2.428,966.2458814,90.504574
+S,No app.,Tembotrione,Susceptible,72,10,61.7,68.72834869,308.475,1.127,273.7133984,86.40063843
+S,No app.,Tembotrione,Susceptible,72,11,44.45,77.47123338,222.26,1.38,161.057971,91.99788686
+S,No app.,Tembotrione,Susceptible,72,12,31.28,84.14623577,156.405,1.127,138.7799468,93.10476328
+S,No app.,Tembotrione,Susceptible,168,13,12.81,93.50745781,64.05,1.043,61.40939597,96.94889405
+S,No app.,Tembotrione,Susceptible,168,14,12.19,93.82169482,60.955,0.892,68.33520179,96.60478763
+S,No app.,Tembotrione,Susceptible,168,15,12.3,93.76594309,61.515,1.22,50.42213115,97.49479274
+S,No app.,Tembotrione,Susceptible,168,16,25.02,87.31901595,125.115,0.602,207.8322259,89.67392315
+S,No app.,Tembotrione,Susceptible,336,17,5.58,97.17186687,27.885,0.099,281.6666667,96.00548287
+S,No app.,Tembotrione,Susceptible,336,18,4.08,97.93211771,20.42,0.092,221.9565217,98.97216209
+S,No app.,Tembotrione,Susceptible,336,19,5.23,97.34925873,26.135,0.149,175.4026846,96.28517441
+S,No app.,Tembotrione,Susceptible,336,20,1.84,99.06742563,9.205,0.15,61.36666667,96.95101704
